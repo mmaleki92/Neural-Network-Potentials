@@ -23,3 +23,6 @@ for p_x,p_y in zip(pos_x,pos_y):
     dr1 = np.sqrt(dx1** 2 + dy1**2)
 
     image = image + np.exp(- (dr1**2 / (2 * (0.2 **2))))
+
+
+#i think therfore i am!
