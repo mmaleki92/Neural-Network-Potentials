@@ -1,7 +1,8 @@
-This repository is an in-progress project, and here I will edit it regularly. My purpose is to collect articles in this manner and reproduce their way of tackling this problem, so stay tuned!
+This repository is an in-progress project, so I will regularly edit it. My purpose is to collect articles and reproduce their way of tackling this problem, so stay tuned!
 
 # neural network potentials
-When we want to take advantage of a neural network to construct a potential energy surface (how atoms see their neighbors! and interact with them), we should consider the physical system symmetries. We already know that we should take translation, rotation, permutation, and reflection symmetry for a problem such as potential energy into account. People already did different works for tackling these symmetry things. Still, the problem is already out there (and that is the reason why we every day see a lot of creative ways of representing molecular configurations for machine learning).
+When we take advantage of a neural network to construct a potential energy surface (how atoms see their neighbors! and interact with them), we should consider the physical system symmetries. We already know that we should take translation, rotation, permutation, and reflection symmetry into account for a problem such as potential energy. People already did different works for tackling these symmetry things. Still, the problem is already out there (and that is the reason why we every day see a lot of creative ways of representing molecular configurations for machine learning).
+
 
 ## image method
 
@@ -39,7 +40,7 @@ for p_x,p_y in zip(pos_x,pos_y):
 and the result will be something like this image:
 ![Alt text](images/graphene_image.png?raw=true "Title")
 
-Suppose that we had converted our atomistic environment to an image (in our case 2D image of graphene), and we already had a sufficient amount of that data. We can then feed those images to the neural network (in our case, Convolutional Neural Network or only CNN). We here take advantage of Keras (with TensorFlow backend). The NN model will be like the following:
+Suppose that we had converted our atomistic environment to an image (in our case, a 2D image of graphene), and we already had a sufficient amount of that data. We can then feed those images to the neural network (in our case, Convolutional Neural Network or only CNN). We here take advantage of Keras (with TensorFlow backend). The NN model will be like the following:
 
 ```python
 def model_paper():
